@@ -109,7 +109,7 @@ function fnJoinConcat(parts: any[]) {
  *   values is lost).
  *
  *   To fix this, "type hints" have been added to the `resolve()` function,
- *   giving an idea of the type of the source value for compplex result values.
+ *   giving an idea of the type of the source value for complex result values.
  *   This only works for objects (not strings and numbers) but fortunately
  *   we only care about the types of intrinsics, which are always complex values.
  *
@@ -128,7 +128,7 @@ function fnJoinConcat(parts: any[]) {
  *   type model,  which can be returned by `resolve()`, and interpreted by `tokenAwareStringify()`
  *   to produce the correct JSON.
  *
- *   And example will quickly show the point:
+ *   An example will quickly show the point:
  *
  *    User writes:
  *       { [resource.resourceName]: 'SomeValue' }
