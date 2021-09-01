@@ -65,9 +65,12 @@ export class MatchResult {
    * @param id the id of the parent tree.
    */
   public compose(id: string, inner: MatchResult): this {
-    const innerF = (inner as any).failures as MatchFailure[];
-    this.failures.push(...innerF.map(f => {
-      return { path: [id, ...f.path], message: f.message, matcher: f.matcher };
+    this.failures.push(...inner.failures.map(f => {
+      return {
+        path: [id, ...f.path],
+        message: f.message,
+        matcher: f.matcher,
+      };
     }));
     return this;
   }
